@@ -13,6 +13,7 @@ export default function TextFieldSizes() {
     const { name: attr, value } = event.target;
     setUserData({ ...userData, [`${attr}`]: value });
   };
+
   const addUser = () => {
     axios.post("http://localhost:4000/contact/add", userData).then((res) => navigate("/getContact"));
   };
